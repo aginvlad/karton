@@ -1,0 +1,387 @@
+/* Basis Settings */
+@import 'variables'
+@import 'offer'
+html
+	font-size: 10px
+body
+	font-family: Roboto, sans-serif
+	color: $textDark
+	@include reg
+section
+ padding: 3rem 0rem
+/* Basic Elements */
+.button
+ background-color: $mainColor
+ @include medium
+ font-size: 1.5rem
+ border: none
+ border-radius: 5px
+ color: $textLight
+ transition: all 0.5s
+ &:focus
+ 	outline: none
+ &:hover
+  background: lighten($mainColor, 8) 
+  cursor: pointer
+.form
+ &__input
+  padding: 1.5rem
+  border: none
+  border-radius: 5px
+  font-size: 1.5rem
+  color: rgba($textDark, 0.7)
+.section-header
+	text-align: center
+	h2
+		font-size: 2.8rem
+		@include bold
+		text-transform: uppercase
+.readButton
+ @include medium
+ font-size: 1.5rem
+ color: #9b9b9b
+ padding: 1.4rem 2.8rem
+ &:focus
+ 	outline: none
+ &:hover
+  cursor: pointer
+ border: 1px solid #9b9b9b
+ border-radius: 5px
+ background-color: transparent
+.slick-slide:focus
+	outline: none
+/* </Basic Elements> */
+
+/* Sections */
+main
+	padding: 1.5rem 6rem
+	.header-contacts
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		@include medium
+	 font-size: 2rem
+	 &__phones
+	  font-size: 2.2rem
+	  padding-top: 1rem
+	  padding-right: 2rem
+	 &__button
+	  padding: 1.2rem 2.2rem
+	  img
+	  	vertical-align: middle
+.main-section
+ background: #fff url(../img/main-bg.jpg) 0 0 no-repeat
+ background-size: cover
+ img
+  transform: translateX(-5%)
+ h1
+ 	font-size: 4rem
+ 	@include bold
+ 	color: $textLight
+ .main-header
+ 	font-size: 2.8rem
+ 	color: $textLight
+ &__form
+ 	padding: 3rem
+ 	background-color: rgba(#fff, 0.2)
+ 	h2, strong
+ 	 color: $textLight
+ 		font-size: 2rem
+ 		line-height: 30px
+ 		@include light
+ 	strong
+ 	 @include bold
+ 	 text-transform: uppercase
+ 	.form
+ 	 margin-top: 2rem
+ 	 margin-bottom: 1rem
+ 	 &__input
+ 	  width: 65%
+	 	.button
+	 	 padding: 1.5rem
+	 	 margin-left: 1rem
+	 small
+	 	margin-left: 1.4rem
+	 	color: $textLight
+	 	font-size: 1.4rem
+	 	@include light
+.features
+	background-color: #f4f4f4
+	text-align: center
+	&-main
+		h2
+			@include bold
+		 color: $mainColor
+		 font-size: 3.6rem
+		p
+		 font-size: 1.6rem
+		margin-bottom: 4rem
+	&-content
+	 &__element
+	 	position: relative
+	  background-color: #fff
+	  margin-bottom: 3rem
+	  min-height: 15rem
+	  padding: 2.5rem 1rem
+	  h3
+	  	text-align: left
+	  	margin-left: 7rem
+	   font-size: 1.5rem
+	   @include bold
+			p
+				text-align: justify
+				margin-left: 7rem
+			 text-align: left
+			 font-size: 1.4rem
+			 @include light
+			img
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 2rem
+
+.product
+ &__element
+  margin-bottom: 3.7rem
+	 h3
+	  min-height: 5rem
+	 	margin-top: 2rem
+	 	text-align: center
+	  font-size: 2rem
+	  @include medium
+	  margin-bottom: 1rem
+	 .button
+	 	margin-left: 1rem
+	  padding: 1.4rem 2.8rem
+	 img
+	 	height: 27rem
+
+.clients
+	padding: 6rem
+	&__element
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 13rem
+		margin-top: 3.3rem
+		border: 1px solid rgba(0, 0, 0, 0.1)
+		filter: grayscale(100%)
+		transition: all 0.8s
+	&__element:hover
+		filter: grayscale(0%)
+		cursor: pointer
+		
+.feedback
+	background-color: #f4f4f4
+	padding: 6rem
+	&-slider
+		position: relative
+		text-align: center
+		margin-top: 3rem
+		&__element
+			img
+			 display: block
+			 height: 36rem
+			 margin: auto
+		.prev
+			position: absolute
+			left: -3%
+			top: 50%
+			transform: translateY(-75%)
+			border: none
+			width: 1rem
+			height: 4.7rem
+		 background: url(../img/feedback/prev.png) center no-repeat
+		 &:hover, &:focus
+		 	outline: none
+		.next
+			position: absolute
+			right: -3%
+			top: 50%
+			transform: translateY(-75%)
+			border: none
+			width: 1rem
+			height: 4.7rem
+		 background: url(../img/feedback/next.png) center no-repeat
+		 &:hover, &:focus
+		 	outline: none
+
+.map
+	position: relative
+	padding: 0
+	height: 55rem
+	&-block
+		position: absolute
+		top: 7rem
+		left: 12%
+		padding: 3rem
+		width: 31rem
+		text-align: left
+		background-color: #fff
+		&__element
+			h3, p
+				display: inline-block
+				margin-left: 1rem
+			h3
+				font-size: 1.8rem
+				@include medium
+			p
+				font-size: 1.6rem
+				@include light
+				margin-left: 3.2rem
+			img
+				display: inline-block
+			button
+				display: block
+				margin: auto
+				padding: 1.8rem 2.4rem
+				margin-bottom: 2rem
+		#map-block__element2
+			h3
+			 margin-left: 3rem
+			margin-bottom: 2rem
+		#map-block__element4
+			img
+				margin-top: -0.6rem
+
+footer
+	padding: 2.5rem
+	text-align: center
+	background-color: #1b1b1b
+	small
+		font-size: 1.3rem
+		color: #7e7e7e
+
+/* Media */
+@media (max-width: 1199px)
+ .main-section
+  &__form
+  	padding: 3rem
+  	background-color: rgba(#fff, 0.2)
+  	.form
+  	 margin-top: 2rem
+  	 margin-bottom: 1rem
+  	 &__input
+  	  width: 57%
+ 	 	.button
+ 	 	 padding: 1.5rem
+ 	 	 margin-left: 1rem
+ 	 small
+ 	 	margin-left: 1.4rem
+ .features
+ 	&-content__element
+ 		min-height: 16.8rem
+@media (max-width: 991px)
+ main
+	 .header-contacts
+	 	display: flex
+	 	flex-direction: row
+	 	flex-wrap: wrap
+	 	justify-content: flex-end
+	 	#phone1
+	 	 padding-top: 0
+	 	 margin-bottom: -0.5rem
+	 	 order: 1
+	 	#phone2 
+	 	 padding-top: 0
+	 	 margin-top: -0.5rem
+	 	 transform: translateX(-94%)
+	 	 order: 3
+	 	&__button
+	 		transform: translateY(35%)
+	 	 order: 2
+	.main-section
+	 img
+	  display: none
+	.features
+		&-content__element
+			min-height: 0
+	.map
+		&-block
+			display: none
+
+@media (max-width: 767px)
+ main
+  .logo
+   text-align: left
+  .header-contacts
+  	display: flex
+  	flex-direction: row
+  	flex-wrap: wrap
+  	justify-content: flex-end
+  	#phone1
+  	 padding-top: 0
+  	 margin-bottom: -0.5rem
+  	 order: 1
+  	#phone2 
+  	 padding-top: 0
+  	 margin-top: -0.5rem
+  	 transform: translateX(0%)
+  	 order: 2
+  	&__button
+  		transform: translateX(-8%)
+  	 order: 3
+@media (max-width: 575px)
+ main
+ 	.logo
+ 	 display: none
+ 	.header-contacts
+ 		display: flex
+ 		flex-direction: row
+ 		flex-wrap: wrap
+ 		justify-content: flex-center
+ 		#phone1
+ 		 padding-top: 0
+ 		 margin-bottom: -0.5rem
+ 		 order: 1
+ 		#phone2 
+ 		 padding-top: 0
+ 		 margin-top: -0.5rem
+ 		 transform: translateX(0%)
+ 		 order: 2
+ 		&__button
+ 			transform: translateX(-8%)
+ 		 order: 3
+ .main-section
+  img
+   transform: translateX(-5%)
+  background: #fff url(../img/main-bg.jpg) 0 0 repeat
+  h1
+  	font-size: 4rem
+  	text-align: center
+  	@include bold
+  	color: $textLight
+  .main-header
+  	text-align: center
+  	font-size: 2.8rem
+  	color: $textLight
+  	@include reg
+  &__form
+  	padding: 3rem
+  	text-align: center
+  	background-color: rgba(#fff, 0.2)
+  	h2, strong
+  	 color: $textLight
+  		font-size: 2rem
+  		line-height: 30px
+  		@include light
+  	strong
+  	 @include bold
+  	 text-transform: uppercase
+  	.form
+  	 margin-top: 2rem
+  	 margin-bottom: 1rem
+  	 &__input
+  	  width: 100%
+ 	 	.button
+ 	 		margin-top: 1rem
+ 	 		width: 70%
+ 	 	 padding: 1.5rem
+ 	 	 margin-left: 1rem
+ 	 small
+ 	 	margin-left: 1.4rem
+ 	 	color: $textLight
+ 	 	font-size: 1.4rem
+	.clients
+		&__element
+			border: none
